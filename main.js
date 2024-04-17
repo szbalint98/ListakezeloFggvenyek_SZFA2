@@ -1,5 +1,5 @@
 import { emberekLISTA } from "./adat.js";
-import { tablazatRendez } from "./adatkezelo.js";
+import { szuresNevszerint, tablazatRendez } from "./adatkezelo.js";
 import { megjelenites, tablazatOsszeallit } from "./fuggvenyek.js";
 /*  jelenítsük meg az adatainkat egy táblázatban az adatok div-ben
 az urlap div-ben legyen egy űrlap, amivel ilyen adatokat tudunk a táblázatba beletenni
@@ -39,3 +39,6 @@ function nevRendez(lista) {
         nevIrany*=(-1);
         init(LISTA);
 })}
+
+
+
