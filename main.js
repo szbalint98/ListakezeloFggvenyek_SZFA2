@@ -1,5 +1,5 @@
 import { emberekLISTA } from "./adat.js";
-import { szuresNevszerint, tablazatRendez } from "./adatkezelo.js";
+import { szuresNevszerint, szuresSzovegszerint, tablazatRendez } from "./adatkezelo.js";
 import { megjelenites, tablazatOsszeallit } from "./fuggvenyek.js";
 /*  jelenítsük meg az adatainkat egy táblázatban az adatok div-ben
 az urlap div-ben legyen egy űrlap, amivel ilyen adatokat tudunk a táblázatba beletenni
@@ -21,12 +21,17 @@ Ezután megjelenítjük a szűrt listát az oldalon.
 Akkor fog lefutni, amikor megváltozik a szűrőmező tartalma 
  
  */
+
 let nevIrany=1
 init(emberekLISTA)
+szuresSzovegszerint(emberekLISTA)
 function init(lista) {
     let txt=tablazatOsszeallit(lista);
     megjelenites(txt)
     nevRendez(lista);
+    
+    
+    
 }
 
 function nevRendez(lista) {
@@ -40,5 +45,12 @@ function nevRendez(lista) {
         init(LISTA);
 })}
 
+function szuresSzovegszerint() {
+    const szuroELEM=$("#szNev")
+    szuroELEM.on("keyup",function(){
+        let szuroszoveg=szuroELEM.val()
+        const LISTA=szuresNevszerint(emberekLISTA,szuroszoveg)
+        init(LISTA)
+})}
 
 
