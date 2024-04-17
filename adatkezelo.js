@@ -16,7 +16,13 @@ export function szuresNevszerint(lista,szurtSzoveg){
     
 
 }
-
+export function szuresSzovegszerint(szoveg) {
+    const szuroELEM=$("#szNev")
+    szuroELEM.on("keyup",function(){
+        let szuroszoveg=szuroELEM.val()
+        const LISTA=szuresNevszerint(emberekLISTA,szuroszoveg)
+        init(LISTA)
+})}
 
 function sortorles(){
 

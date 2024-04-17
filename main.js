@@ -24,7 +24,7 @@ Akkor fog lefutni, amikor megváltozik a szűrőmező tartalma
 
 let nevIrany=1
 init(emberekLISTA)
-szuresSzovegszerint(emberekLISTA)
+
 function init(lista) {
     let txt=tablazatOsszeallit(lista);
     megjelenites(txt)
@@ -45,12 +45,6 @@ function nevRendez(lista) {
         init(LISTA);
 })}
 
-function szuresSzovegszerint() {
-    const szuroELEM=$("#szNev")
-    szuroELEM.on("keyup",function(){
-        let szuroszoveg=szuroELEM.val()
-        const LISTA=szuresNevszerint(emberekLISTA,szuroszoveg)
-        init(LISTA)
-})}
+
 
 
