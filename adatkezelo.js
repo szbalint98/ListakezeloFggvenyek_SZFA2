@@ -1,4 +1,4 @@
-import { emberekLISTA } from "./adat";
+
 
 export function tablazatRendez(lista,nevIrany) {
     lista.sort(function(a,b) {
@@ -31,7 +31,7 @@ function sortorles(){
     const kukaELEM=$(".kuka")
     kukaELEM.on("click",function(event){
         let index=event.target.id
-        const LISTA=sortorles(emberekLISTA,index);
+        const LISTA=sortorles(index);
         init()
     })
 
