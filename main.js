@@ -1,4 +1,6 @@
 import { emberekLISTA } from "./adat.js";
+import { tablazatRendez } from "./adatkezelo.js";
+import { megjelenites, tablazatOsszeallit } from "./fuggvenyek.js";
 /*  jelenítsük meg az adatainkat egy táblázatban az adatok div-ben
 az urlap div-ben legyen egy űrlap, amivel ilyen adatokat tudunk a táblázatba beletenni
 
@@ -19,4 +21,21 @@ Ezután megjelenítjük a szűrt listát az oldalon.
 Akkor fog lefutni, amikor megváltozik a szűrőmező tartalma 
  
  */
+let nevIrany=1
+init(emberekLISTA)
+function init(lista) {
+    let txt=tablazatOsszeallit(lista);
+    megjelenites(txt)
+    nevRendez(lista);
+}
 
+function nevRendez(lista) {
+    
+
+    const nevELEM=$('.adatok th').eq(0) /*első elem megfogása*/
+    nevELEM.on("click",function () {
+        const LISTA=tablazatRendez(lista,nevIrany);
+        console.log(LISTA)
+        nevIrany*=(-1);
+        init(LISTA);
+})}
